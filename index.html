@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Management</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Session Management Lab</h1>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="challenge">
+                <span class="challenge-name">Challenge 1 <span class="tag">COOKIES</span></span>
+                <span class="challenge-description">Authenticate yourself then POST the flag</span>
+                <div class="codeblock">
+                    <span class="line">POST /cookie/challenge1/authenticate <span class="code-comment"># authenticate yourself</span></span>
+                    <span class="line">POST /cookie/challenge1/authorise <span class="code-comment"># fetch flag</span></span>
+                </div>
+                <div class="flag-submission">
+                    <form action="/verify/challenge1" method="post">
+                        <input type="text" placeholder="Flag goes here...">
+                        <input type="button" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div class="challenge">
+                <span class="challenge-name">Challenge 2 <span class="tag">COOKIES</span><span class="tag">PRIVILEGE ESCALATION</span></span>
+                <span class="challenge-description">Manipulate the cookie to gain admin access</span>
+                <div class="codeblock">
+                    <span class="line">POST /cookie/challenge2/authenticate <span class="code-comment"># authenticate yourself</span></span>
+                    <span class="line">POST /cookie/challenge2/authorise <span class="code-comment"># fetch flag</span></span>
+                </div>
+                <div class="flag-submission">
+                    <form action="/verify/challenge2" method="post">
+                        <input type="text" placeholder="Flag goes here...">
+                        <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div class="challenge">
+                <span class="challenge-name">Challenge 3 <span class="tag">COOKIES</span><span class="tag">ENCODING</span></span>
+                <span class="challenge-description">Decode, filp, re-encode</span>
+                <div class="codeblock">
+                    <span class="line">POST /cookie/challenge3/authenticate <span class="code-comment"># authenticate yourself</span></span>
+                    <span class="line">POST /cookie/challenge3/authorise <span class="code-comment"># fetch flag</span></span>
+                </div>
+                <div class="flag-submission">
+                    <form action="/verify/challenge3" method="post">
+                        <input type="text" placeholder="Flag goes here...">
+                        <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div class="challenge">
+                <span class="challenge-name">Challenge 4 <span class="tag">COOKIES</span><span class="tag">PRIVILEGE ESCALATION</span><span class="tag">XOR</span></span>
+                <span class="challenge-description">Someone called this encryption. It's not.</span>
+                <div class="codeblock">
+                    <span class="line">POST /cookie/challenge4/authenticate <span class="code-comment"># authenticate yourself</span></span>
+                    <span class="line">POST /cookie/challenge4/authorise <span class="code-comment"># fetch flag</span></span>
+                </div>
+                <div class="flag-submission">
+                    <form action="/verify/challenge3" method="post">
+                        <input type="text" placeholder="Flag goes here...">
+                        <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
