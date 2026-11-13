@@ -1,0 +1,182 @@
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-alt: #1c2333;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #39d353;
+  --accent-dim: #238636;
+  --tag-bg: #1f6feb;
+  --light-bg: #6ee7db;
+  --code-bg: #010409;
+  --comment: #6e7681;
+  --mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav h1::before {
+  content: "$ ";
+  color: var(--accent);
+}
+
+main {
+  padding: 2.5rem 0;
+}
+
+.challenge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.challenge:hover {
+  border-left-color: var(--accent-dim);
+  transform: translateX(2px);
+}
+
+.challenge-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-description {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: var(--tag-bg);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.codeblock {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+}
+
+.line {
+  display: block;
+  white-space: pre;
+  color: #e6edf3;
+  padding: 0.15rem 0;
+}
+
+.line::before {
+  content: "> ";
+  color: var(--accent);
+}
+
+.code-comment {
+  color: var(--comment);
+  font-style: italic;
+}
+
+
+.flag-submission {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+.flag-submission form {
+  display: flex;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.flag-submission input[type="text"] {
+  flex: 1;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.65rem 0.9rem;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flag-submission input[type="text"]::placeholder {
+  color: var(--comment);
+}
+
+.flag-submission input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.15);
+}
+
+.flag-submission input[type="button"],
+.flag-submission input[type="submit"] {
+  background: var(--light-bg);
+  color: #0c1016;
+  border: none;
+  border-radius: 5px;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.flag-submission input[type="button"]:active,
+.flag-submission input[type="submit"]:active {
+  transform: translateY(1px);
+}
